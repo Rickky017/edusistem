@@ -373,9 +373,27 @@
     </div>
 
 <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-    import { getFirestore, doc, getDoc, addDoc, setDoc, updateDoc, deleteDoc, onSnapshot, collection, query, where, getDocs, writeBatch, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+// Importa las funciones que necesitas del SDK
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+  // Puedes agregar más imports según los productos de Firebase que uses
+
+  // Tu configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyBsTK0Ax5tzjX4mz25n4hoGVotIuUkKrFo",
+    authDomain: "edusistem-eef5e.firebaseapp.com",
+    projectId: "edusistem-eef5e",
+    storageBucket: "edusistem-eef5e.appspot.com", // <--- corregido
+    messagingSenderId: "328823083464",
+    appId: "1:328823083464:web:0481e90cab31664474b0fd",
+    measurementId: "G-K9KKDY141H"
+  };
+
+  // Inicializa Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+  // Puedes seguir agregando lógica aquí para otros servicios como Firestore, Auth, etc.
 
     setLogLevel('debug'); // Habilita logs de debug de Firestore
 
