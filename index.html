@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ x<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -373,11 +373,10 @@
     </div>
 
 <script type="module">
-    / Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, doc, getDoc, addDoc, setDoc, updateDoc, deleteDoc, onSnapshot, collection, query, where, getDocs, writeBatch, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
     setLogLevel('debug'); // Habilita logs de debug de Firestore
 
     let db;
@@ -392,8 +391,11 @@ import { getAnalytics } from "firebase/analytics";
     let periodPattern = ['P1', 'P2', 'RP', 'P3', 'P4', 'RP', 'P1', 'P2', 'RP', 'P3', 'P4', 'RP', 'P1', 'P2', 'RP', 'P3', 'P4', 'RP', 'P1', 'P2', 'RP', 'P3', 'P4', 'RP'];
 
     // Obtener variables globales del entorno
-    
-/
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -410,14 +412,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-
-
-
-
-
-
-    
     // --- FIREBASE INITIALIZATION ---
     async function initializeFirebase() {
         if (Object.keys(firebaseConfig).length === 0) {
@@ -1536,3 +1530,5 @@ const analytics = getAnalytics(app);
 </script>
 </body>
 </html>
+
+
